@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block links %} {% endblock %}
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contacts' %}">Contacts</a>
+            <a href="{% url 'auth' %}">Authorization</a>
+            <a href="{% url 'registration' %}">Registration</a>
+            <a href="{% url 'my_qrcode' %}">Me QR Code</a>
+            <a href="{% url 'plan_settings' %}">Plan Settings</a>
+            <a href="{% url 'generate' %}">Generate</a>
+
+        </header>
+
+        {% block content %}
+        {% endblock %}
+        <footer></footer>
+    </body>
+</html>
