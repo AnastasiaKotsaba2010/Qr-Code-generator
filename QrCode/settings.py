@@ -138,9 +138,10 @@ STATICFILES_DIRS = [
     BASE_DIR / 'home' / 'static',
     BASE_DIR / 'registration' / 'static',
     BASE_DIR / 'authorization' / 'static',
-    BASE_DIR / 'contacts' / 'static',
+    BASE_DIR / 'generate' / 'static',
     BASE_DIR / 'plan_settings' / 'static',
-    BASE_DIR / 'contacts' / 'static'
+    BASE_DIR / 'contacts' / 'static',
+    
 ]
 
 # Default primary key field type

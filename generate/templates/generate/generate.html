@@ -1,16 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
-
+    
 {% block title %}
     Generate Qr
 {% endblock %}
 
-{% block link %}
+{% block links %}
     <link rel="stylesheet" href="generate/css/generate.css">
 {% endblock %}
 
 {% block content %}
+    <header>
+        <img src="" alt="logo image">
+    </header>
     <h1>
         Generate Qr Code
     </h1>
+
+    <div class = "Add  Content">
+        <h3>Add content to your QR code</h3>
+        <p>Upload a file
+            Upload a file you want to display</p>
+        <p>Design
+            Choose a color theme</p>
+    </div>
+    
+    <div>
+        <img src="" alt="QrCode">
+        <button>DOWNLOAD</button>
+    </div>
 {% endblock %}
