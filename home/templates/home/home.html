@@ -5,30 +5,48 @@
     Home
 {% endblock %}
 
-{% block link %}
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% block links %}
+    <link rel="stylesheet" href="{% static 'home/css/home_styles.css' %}">
 {% endblock %}
 
 {% block content %}
 
-    <header>
-        <img src="" alt="logo image">
-        <button>Sign Up</button>
-        <button>Log In</button>
-    </header>
+<h1 class="intro">
+    Create & Customize <br> <span class="free">Your Dynamic QR code for <span class="free2">FREE</span></span>
+    <span class="gray-text">Easily generate, manage and statistically track your QR codes</span>
+</h1>
 
-    <h1>Create & Customize Your Dynamic QR code for FREE 
-        Easily generate, manage and statistically track your QR codes
-    </h1>
     
     <div class="chart">
-        <p>1</p>
-        <p>GENERATE</p>
-        <p>2</p>
-        <p>CUSTOMIZE</p>
-        <P>DOWNLOAD & USE</P>
-        <p>3</p>
+        <div class="step">
+            <p class="number">1</p>
+
+            <div class="generate">
+                <p class="label">GENERATE</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <p class="number">2</p>
+            <div class="generate">
+                <p class="label">CUSTOMIZE</p>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="step">
+            <p class="number">3</p>
+            
+            <div class="generate">
+                <p class="label">DOWNLOAD & USE</p>
+                <div class="line"></div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <hr>
     <div class="about-us">

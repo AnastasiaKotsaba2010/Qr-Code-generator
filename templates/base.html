@@ -1,25 +1,36 @@
 {% load static %}
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
         {% block links %} {% endblock %}
     </head>
 
     <body>
-        <header>
+        <header style="position: relative; top: 0">
+            <img src="{% static 'img/logo.svg' %}" alt="logo" class="logo">
+
             <nav>
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'contacts' %}">Contacts</a>
-                <a href="{% url 'auth' %}">Authorization</a>
-                <a href="{% url 'registration' %}">Registration</a>
-                <a href="{% url 'my_qrcode' %}">Me QR Code</a>
-                <a href="{% url 'plan_settings' %}">Plan Settings</a>
-                <a href="{% url 'generate' %}">Generate</a>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                    <!-- <li><a href="{% url 'auth' %}">Login</a></li> -->
+                    <!-- <li><a href="{% url 'registration' %}">Sign Up</a></li> -->
+                    <li><a href="{% url 'my_qrcode' %}">My QR Codes</a></li>
+                    <li><a href="{% url 'plan_settings' %}">Plan Settings</a></li>
+                    <li><a href="{% url 'generate' %}">Generate QR Code</a></li>
+                </ul>  
             </nav>
+
+            <a href="{% url 'auth' %}"><button class="btn-log">Login</button></a>
+            <a href="{% url 'registration' %}"><button class="btn-reg">Sign Up</button></a>
         </header>
 
         {% block content %}

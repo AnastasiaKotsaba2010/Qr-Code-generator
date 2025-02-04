@@ -5,8 +5,8 @@
     my_QrCode
 {% endblock %}
 
-{% block link %}
-    <link rel="stylesheet" href="my_QrCode/css/my_QrCode.css">
+{% block links %}
+    <link rel="stylesheet" href= "{% static 'my_QrCode/css/my_QrCode.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -18,26 +18,30 @@
         <img src="" alt="gr logo">
     </header>
 
-    <div>
-        <img src="" alt="qr image">
-        <li> QR name </li>
-        <li> Description </li>
-        <li> (used for) </li> 
+    <div class="qr-info">
+        <div>
+            <img src="" alt="qr image">
+            <li> QR name </li>
+            <li> Description </li>
+            <li> (used for) </li> 
+        </div>
+
+        <div>
+            <img src="" alt="qr image">
+            <li> QR name </li>
+            <li> Description </li>
+            <li> (used for) </li> 
+        </div>
+
+        <div>
+            <img src="" alt="qr image">
+            <li> QR name </li>
+            <li> Description </li>
+            <li> (used for) </li> 
+        </div>
     </div>
 
-    <div>
-        <img src="" alt="qr image">
-        <li> QR name </li>
-        <li> Description </li>
-        <li> (used for) </li> 
-    </div>
-
-    <div>
-        <img src="" alt="qr image">
-        <li> QR name </li>
-        <li> Description </li>
-        <li> (used for) </li> 
-    </div>
+    
     
 {% endblock %}
 

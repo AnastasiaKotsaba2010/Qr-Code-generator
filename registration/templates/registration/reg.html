@@ -5,12 +5,45 @@
     Registration
 {% endblock %}
 
-{% block link %}
-    <link rel="stylesheet" href="registration/css/reg.css">
+{% block links %}
+    <link rel="stylesheet" href="{% static 'reg\css\reg.css' %}">
 {% endblock %}
 
 {% block content %}
-    <h1>
-        Registration
-    </h1>
+    <div class="wrapper">
+        <span class="rotate-bg"></span>
+
+        <div class="form-box reg">
+            <h2 class="title">Sign Up</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Pasword</label>
+                    <i class='bx bx-lock'></i>
+                </div>
+
+                <button type="submit" class="btn-login">Sign Up</button>
+                
+                <div class="linkTxt">
+                    <p>Already have an account? <a href="{% url 'auth' %}" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-text reg">
+            <h2>Join our team now!</h2>
+            <p>Please enter your details.</p>
+    </div>
 {% endblock %}

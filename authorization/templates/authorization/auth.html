@@ -5,12 +5,40 @@
     Authorization
 {% endblock %}
 
-{% block link %}
-    <link rel="stylesheet" href="authorization/css/auth.css">
+{% block links %}
+    <link rel="stylesheet" href="{% static 'auth\css\auth.css' %}">
 {% endblock %}
 
 {% block content %}
-    <h1>
-        Authorization
-    </h1>
+    <div class="wrapper">
+        <span class="rotate-bg"></span>
+
+        <div class="form-box login">
+            <h2 class="title">Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+    
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Pasword</label>
+                    <i class='bx bx-lock'></i>
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+                
+                <div class="linkTxt">
+                    <p>Don't have an account? <a href="{% url 'registration' %}" class="reg-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-text login">
+            <h2>Welcome Back!</h2>
+            <p>Please enter your details.</p>
+        </div>
+
 {% endblock %}

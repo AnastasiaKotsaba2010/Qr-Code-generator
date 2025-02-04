@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'my_QrCode',
-    # 'generate',
+    'generate',
     'plan_settings',
     'authorization',
     'registration',
@@ -140,7 +140,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'authorization' / 'static',
     BASE_DIR / 'generate' / 'static',
     BASE_DIR / 'plan_settings' / 'static',
-    BASE_DIR / 'contacts' / 'static',
+    BASE_DIR / 'contacts' / 'static'
     
 ]
 
