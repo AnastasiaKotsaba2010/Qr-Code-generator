@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'styles_home/css/home_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles_home/css/home_styles.css' %}?v={{ timestamp }}">
 {% endblock %}
 
 {% block content %}
@@ -55,55 +55,92 @@
         <div class="about-us">
             <h1>What Are We Doing</h1>
             <li>QR-aft provides you the ability to create fully customization dynamic QR codes of various categories with further collection of scan statistics.</li>
+            <br>
+            <li>Our web application simplifies the process of generating customized QR codes for businesses and individuals.</li>
         </div>
 
         <div class="benefits">
             <h1>Our Benefits</h1>
-            <li>Our QR code generator is easy to use, supports multiple types (URLs, text, Image, etc.), offers customization designs with logos and colors, and provides high-quality downloads in PNG, JPG, or SVG formats. With secure, reliable, and mobile-friendly functionality, it’s perfect for personal or business use, with flexible plans, including a free option.</li>
+            <li>Our QR code generator is easy to use, supports multiple types (URLs, text, Image, etc.), offers customization designs with logos and colors, and provides high-quality downloads in PNG, JPG, or SVG formats.</li>
+            <br>
+            <li>Secure, reliable, and mobile-friendly functionality, it’s perfect for personal or business use, with flexible plans, including a free option.</li>
         </div>
     </div>
     
     <hr>
 
-    <h2>Plans & Pricing</h2>
+    <h2 class="plans">Plans & Pricing</h2>
 
-    <div class="free-plan">
-        <h2>FREE</h2>
-        <p class="price-plan">$0/</p>
-        <p class="per-month">Month</p>
+    <div class="plan-container">
+        <div class="free-plan" id="plan-box">
+            <div class="top-box">
+                <h2>FREE</h2>
+                <div class="pricing">
+                    <p class="price-plan">$0/</p>
+                    <p class="per-month">Month</p>
+                </div>
+            </div>
+            
+            <div class="p-container">
+                <p>Create a single QR code with a 6-month validity. <br></p>
+                <hr>
+                <p>Basic customization options available. <br></p>
+                <hr>
+                <p>Available at no cost for registered users. <br></p>
+                <hr>
+            </div>
+            
+        </div>
+        
+        <div class="standart-plan" id="plan-box">
+            <div class="top-box">
+                <h2>STANDART</h2>
+                <div class="pricing">
+                    <p class="price-plan">$2/</p>
+                    <p class="per-month">Month</p>
+                </div>
+            </div>
 
-        <p>&#10003; Create a single QR code with a 6-month validity. <br></p>
-        <p>&#10003; Basic customization options available. <br></p>
-        <p>&#10003; Available at no cost for registered users. <br></p>
+            <div class="p-container">
+                <p>Create and customize up to 10 QR codes per month. <br></p>
+                <hr>
+                <p>Priced at $2 per month for access. <br></p>
+                <hr>
+                <p>More design options for your QR codes, including colors and logos. <br></p>
+                <hr>
+            </div>
+            
+        </div>
+
+        <div class="pro-plan" id="plan-box">
+            <div class="top-box">
+                <h2>PRO</h2>
+                <div class="pricing">
+                    <p class="price-plan">$10/</p>
+                    <p class="per-month">Month</p>
+                </div>
+            </div>
+            
+            <div class="p-container">
+                <p>Generate up to 100 QR codes each month. <br></p> 
+                <hr>
+                <p>Full access to all customization and branding options. <br></p>
+                <hr>
+                <p>Access to premium customer support for faster assistance. <br></p>
+                <hr>
+            </div>
+            
+        </div>
     </div>
-    
-    <div class="standart-plan">
-        <h2>STANDART</h2>
-        <p class="price-plan">$2/</p>
-        <p class="per-month">Month</p>
 
-        <p>&#10003; Create and customize up to 10 QR codes per month. <br></p>
-        <p>&#10003; Priced at $2 per month for access. <br></p>
-        <p>&#10003;  More design options for your QR codes, including colors and logos. <br></p>
-    </div>
-
-    <div class="pro-plan">
-        <h2>PRO</h2>
-        <p class="price-plan">$10/</p>
-        <p class="per-month">Month</p>
-
-        <p>&#10003; Generate up to 100 QR codes each month. <br></p>
-        <p>&#10003; Full access to all customization and branding options. <br></p>
-        <p>&#10003; Access to premium customer support for faster assistance. <br></p>
-    </div>
 
     <hr>
 
-    <footer>
+    <footer style="position: relative; bottom: 0">
         <div class="general-info">
-            <img src="" alt="image logo">
-            <p>Generate your own QR Code in just few steps with QR-aft web site </p>
-            <p>Freely customize and use any types of QR code</p>
+            <img src="{% static 'img/white-logo.svg' %}" alt="image logo">
+            <li>Generate your own QR Code in just few steps with QR-aft web site</li>
+            <li>Freely customize and use any types of QR code</li>
         </div>
 
         <div class="services">
@@ -114,15 +151,15 @@
         </div>
 
         <div class="contact-us">
-            <img src="" alt="tg image">
-            <img src="" alt="x image">
-            <img src="" alt="tiktok image">
-            <img src="" alt="inst image">
+            <img src="{% static 'img/tg.svg' %}" alt="tg image">
+            <img src="{% static 'img/x.svg' %}" alt="x image">
+            <img src="{% static 'img/tt.svg' %}" alt="tiktok image">
+            <img src="{% static 'img/inst.svg' %}" alt="inst image">
         </div>
         
         <div>
             <h2>Create, manage and track your QR codes</h2>
-            <button class="sign-up-btn">Sign up</button>
+            <a href="{% url 'registration' %}"><button class="btn-reg">Sign Up</button></a>
         </div>
     </footer>
 {% endblock %}
