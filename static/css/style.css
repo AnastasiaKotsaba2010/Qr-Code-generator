@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(221, 230, 252, 0.9);
+    overflow-y: scroll;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+} 
+  
+li, a, button{
+    font-family: 'Roboto', sans-serif;
+    font-family: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+
+    padding: 5px 10%;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.229); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+
+    margin-bottom: 50px;
+}
+
+
+.logo{
+    cursor: pointer;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a{
+    transition: all 0.5s ease 0s;
+}
+
+
+.nav-links li a:hover{
+    color: rgb(78, 99, 155);
+    font-size: 17px;
+}
+
+button {
+    padding: 9px 10px;
+    background-color: rgb(46, 60, 98);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    
+}
+
+button:hover {
+    background-color: rgb(59, 76, 123);
+    box-shadow:  0 0 10px rgb(47, 47, 48);
+}
+
+.btn-log, .btn-reg {
+    color: rgba(255, 255, 255, 0.816); 
+    text-decoration: none;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    padding: 0 20px 0 20px;
+    color: rgba(255, 255, 255, 0.804);
+    width: 100%;
+    /* height: 20%; */
+
+    border: none;
+    background-color: rgba(78, 72, 72, 0.98);
+}
+
+footer h2{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left; 
+
+    width: 40%;
+    margin: 0 15px 0 0;
+}
+
+.general-info img{
+    width: 70px;
+    height: 70px;
+}
+li{
+    color: rgba(255, 255, 255, 0.804);
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* flex-wrap: wrap; */
+    justify-content: space-between; 
+    gap: 10px; 
+
+    /* width: 100%; */
+}
+
+.contact-us img {
+    width: 60px; 
+    height: 60px; 
+    object-fit: contain; 
+}
+

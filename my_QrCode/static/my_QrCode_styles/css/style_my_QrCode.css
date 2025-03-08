@@ -1,0 +1,82 @@
+.qr-info, .qr-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    
+    padding: 0 30px 0 30px;
+    /* padding-bottom: 10px; */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container h4{
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    color: rgba(126, 126, 120, 0.79);
+    padding-bottom: 10px;
+}
+
+
+.qr-info h3{
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.qr-btn{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+.qr-prop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    right: 0;
+
+    padding-bottom: 10px;
+    /* padding-left: 3px; */
+}
+
+.qr-body img{
+    /* padding-bottom: 5px; */
+    width: 250px;
+    height: 250px;
+}
+
+.description{
+    text-align: center;
+}
+
+
+.qr-prop button{
+    /* display: none; */
+    border: none;
+    background: none;
+
+    width: none;
+    height: none;
+
+    padding: none;
+}
+
+.qr-prop button:hover{
+    box-shadow: none;
+
+}
+
+i{
+    /* background-color: rgba(143, 147, 147, 0.05); */
+    border-radius: 10px;
+}
+

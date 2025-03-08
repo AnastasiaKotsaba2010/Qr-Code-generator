@@ -1,0 +1,8 @@
+.contactUs{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: left;
+
+    gap: 10px;
+}

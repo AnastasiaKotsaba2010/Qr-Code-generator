@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+    
+{% block title %}
+    Generate Qr
+{% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'generate_page/css/style_generate.css' %}">
+{% endblock %}
+
+{% block content %}
+   <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="form-btn">Download</button>
+    </form>
+
+    <script src="{% static 'generate_page/js/page_generate.js' %}" defer></script>
+{% endblock %}

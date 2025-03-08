@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'styles_home/css/home_styles.css' %}?v={{ timestamp }}">
+    <link rel="stylesheet" href="{% static 'home_page/css/home_styles.css' %}">
 {% endblock %}
 
 {% block content %}
 
     <h1 class="intro">
         Create & Customize <br> <span class="free">Your Dynamic QR code for <span class="free2">FREE</span></span>
-        <span class="gray-text">Easily generate, manage and statistically track your QR codes</span>
+        <span class="gray-text-intro">Easily generate, manage and statistically track your QR codes</span>
     </h1>
 
 
@@ -133,6 +133,52 @@
         </div>
     </div>
 
+
+    <hr>
+
+    
+    <h1 class="intro-select">
+        Select <span class="types-txt">QR types</span>
+    </h1>
+    <span class="gray-text">Choose the Type of QR Code You Want to Generate</span>
+
+    <div class="choice-box">
+        <div class="web-site">
+            <img src="{% static 'img/web.svg' %}" alt="">
+            <h2>WEB SITE</h2>
+            <h3>Link to any websites</h3>
+        </div>
+
+        <div class="pdf">
+            <img src="{% static 'img/pdf.svg' %}" alt="">
+            <h2>PDF</h2>
+            <h3>Show a PDF</h3>
+        </div>
+
+        <div class="image">
+            <img src="{% static 'img/image.svg' %}" alt="">
+            <h2>IMAGE</h2>
+            <h3>Share nise images</h3>
+        </div>
+
+        <div class="video">
+            <img src="{% static 'img/camera.svg' %}" alt="">
+            <h2>VIDEO</h2>
+            <h3>Show different videos</h3>
+        </div>
+
+        <div class="link">
+            <img src="{% static 'img/link.svg' %}" alt="">
+            <h2>LINK</h2>
+            <h3>Share multiple links</h3>
+        </div>
+
+        <div class="mp3">
+            <img src="{% static 'img/mp3.svg' %}" alt="">
+            <h2>MP3</h2>
+            <h3>Share favorite albums</h3>
+        </div>
+    </div>
 
     <hr>
 

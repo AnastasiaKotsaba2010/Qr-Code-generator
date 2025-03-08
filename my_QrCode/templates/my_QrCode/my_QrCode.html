@@ -6,13 +6,14 @@
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href= "{% static 'my_QrCode_styles/css/style_my_QrCode.css' %}?v={{ timestamp }}">
+    <link rel="stylesheet" href= "{% static 'my_QrCode_styles/css/style_my_QrCode.css' %} ">
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="qr-info">
             <h3>QR Name</h3>
+            <h4>QR Type</h4>
 
             <div class="qr-body">
                 <img src="{% static 'img/qr-img.svg' %}" alt="qr image">
@@ -33,28 +34,29 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="qr-info">
-                <h3>QR Name</h3>
-    
-                <div class="qr-body">
-                    <img src="{% static 'img/qr-img.svg' %}" alt="qr image">
-    
-                    <div class="qr-prop">
-                        <div class="qr-btn">
-                            <button class="download"><i class='bx bxs-download'></i></button>
-                            <button class="change"><i class='bx bxs-edit-alt'></i></button> 
-                        </div>
-                        
-                        <p class="creation-time">02.02.23</p>
+
+        <div class="qr-info">
+            <h3>QR Name</h3>
+            <h4>QR Type</h4>
+
+            <div class="qr-body">
+                <img src="{% static 'img/qr-img.svg' %}" alt="qr image">
+
+                <div class="qr-prop">
+                    <div class="qr-btn">
+                        <button class="download"><i class='bx bxs-download'></i></button>
+                        <button class="change"><i class='bx bxs-edit-alt'></i></button> 
                     </div>
                     
+                    <p class="creation-time">02.02.23</p>
                 </div>
-    
-                <div class="description">
-                    <p>Description for this qr code</p>
-                </div>
+                
             </div>
+
+            <div class="description">
+                <p>Description for this qr code</p>
+            </div>
+
     </div>
 
 {% endblock %}

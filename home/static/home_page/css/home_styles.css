@@ -1,0 +1,320 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    line-height: 1.5;
+    color: rgba(77, 72, 72, 1);
+    text-align: center;
+
+    
+}
+
+.plans{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    line-height: 1.5;
+    color: rgba(77, 72, 72, 1);
+    text-align: center;
+}
+
+.intro .free {
+    font-size: 45px;
+    color: rgba(77, 72, 72, 1); 
+}
+
+.intro .free2 {
+    font-size: 47px;
+    color: rgba(75, 96, 149, 1); 
+}
+
+
+.intro .gray-text-intro {
+    font-size: 15px;
+    color: rgba(144, 134, 134, 0.522); 
+}
+
+.chart {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    flex-direction: row;
+    /* position: relative; */
+}
+
+.generate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5;
+    padding: 0;
+
+    margin-right: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(80, 87, 103);
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    margin-right: 20px;
+}
+
+.number:hover{
+    box-shadow: 0 0 15px black;
+    transition: 0.7s;
+}
+
+.label {
+    text-align: center;
+    font-size: 16.5px;
+}
+
+.line {
+    width: 115%;  
+    height: 2px;
+    border: 2px solid  rgba(59, 73, 109, 1); 
+    border-radius: 100px;
+}
+
+hr{
+    width: 90%;
+    border: 2px solid rgba(132, 135, 144, 0.76); 
+    border-radius: 100px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/*  */
+
+.about-us, .benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(59, 73, 109, 1);
+
+    padding: 30px;
+    width: 44%;
+    height: 100%;
+
+}
+
+.about-us:hover, .benefits:hover{
+    box-shadow: 0 0 15px black;
+    transition: .5s;
+}
+
+.about-us h1, .benefits h1{
+    color: rgba(255, 255, 255, 0.961);
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.about-us li, .benefits li{
+    color: rgba(255, 255, 255, 0.881);
+    font-size: 27px;
+}
+
+.about-us{
+    border-radius: 0px 20px 20px 20px;
+}
+
+.benefits{
+    border-radius: 20px 20px 0 20px;
+}
+
+.box-info{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+
+/*  */
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 20px;
+}
+
+#plan-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+
+    padding: 20px;
+    color: white;
+
+    width: 24%;
+    height: 95%;
+
+    background-color: rgba(61, 70, 92, 1);
+    border-radius: 24px;
+    transition: 0.5s;
+}
+
+#plan-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.top-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#plan-box h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price-plan {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.per-month {
+    font-size: 20px;
+}
+
+.p-container p {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    gap: 13px;
+    /* text-decoration: underline; */
+    padding: 5px 0;
+}
+
+.p-container p::before {
+    text-decoration: none;
+    content: "✓"; 
+
+}
+
+.p-container hr{
+    border: 1px solid rgba(179, 179, 179, 0.852);
+    margin: auto;
+    margin-bottom: 25px;
+    width: 80%;
+}
+
+/*  */
+
+.intro-select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(77, 72, 72, 1);
+    text-align: center;
+
+    margin: 0;
+}
+
+.types-txt {
+    color: rgba(75, 96, 149, 1); /* Інший колір для "QR types" */
+}
+
+.gray-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: rgba(74, 77, 83, 0.575);
+    font-size: 15px;
+
+    margin-top: 3px;
+}
+
+.choice-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center; 
+
+    gap: 40px; 
+    max-width: 60%; 
+
+    margin: 30px;
+}
+
+
+.choice-box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgba(53, 63, 88, 1);
+    border-radius: 15px;
+
+    width: 200px;
+    height: 123px;
+
+    padding: 40px;
+}
+
+.choice-box img {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.788));
+}
+  
+
+.choice-box h2{
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.916);
+    text-align: center;
+
+    padding: 7px 0 0 0;
+}
+
+.choice-box h3{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.422);
+    text-align: center;
+}
+
+.choice-box div:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition:  0.5s;
+}
+
+

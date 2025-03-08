@@ -6,11 +6,76 @@
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="contacts/css/contacts.css">
+    <link rel="stylesheet" href="{% static 'contact_page/css/style_contacts.css' %}">
 {% endblock %}
 
 {% block content %}
-    <h1>
+    <!-- <h1>
         Contacts
     </h1>
+    <form action="#" style="display: flex;">
+        <div class=""><label class="" tabindex="-1" type="submit" disabled="">
+            <button>Send</button>
+            </label></div></form>
+        <div>
+
+        <label class="contact"></label>
+        <input  id="contact-name" name="name" type="text">
+
+    </div> -->
+
+<body>
+    <div class="contactUs">
+        <div class="title">
+            <h2>Get in Touch</h2>
+        </div>
+        <div class="box">
+            <div class="contact form"></div>
+                <h3>Send a Massage</h3>
+                <form>
+                    <div class="fromBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                            <span>First Name</span>
+                            <input type="text" placeholder="John">
+                        </div>
+                        <div class="inputBox">
+                            <span>Last Name</span>
+                            <input type="text" placeholder="Doe">
+                        </div>
+                    </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="johndoe@email.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Mobile</span>
+                                <input type="text" placeholder="+91 987 654 3210">
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message here..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </form> 
+        </div>   
+            <div class="contact info"></div>
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div></div>
+            <div class="contact map"></div>
+    </div>
+</body>  
 {% endblock %}

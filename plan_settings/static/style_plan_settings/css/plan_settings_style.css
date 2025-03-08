@@ -1,0 +1,106 @@
+
+h1 {
+    font-size: 35px;
+    color: rgba(77, 72, 72, 1); 
+}
+
+
+.plan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-family: 'Roboto', sans-serif;
+
+    color: rgba(0, 0, 0, 0.767);
+    margin-top: 20px;
+}
+
+
+#plan-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    text-align: center;
+
+    padding: 20px;
+
+
+    width: 23%;
+    /* height: 100%; */
+
+    /* background-color: rgba(61, 70, 92, 1); */
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 24px;
+    transition: 0.5s;
+}
+
+#plan-box:hover, .upg-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    
+}
+
+.upg-btn:hover {
+    color: white;
+}
+
+.top-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#plan-box h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price-plan {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.per-month {
+    font-size: 15px;
+}
+
+.p-container p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 13px;
+    padding: 5px 0;
+}
+
+.p-container p::before {
+    text-decoration: none;
+    content: "✓"; 
+
+}
+
+.p-container hr{
+    border: 1px solid rgba(179, 179, 179, 0.852);
+    margin: auto;
+    margin-bottom: 25px;
+    width: 80%;
+}
+
+.upg-btn{
+    border-radius: 5px;
+    border: 1px solid rgba(61, 70, 92, 1);
+    background-color: white;
+    /* border: none; */
+
+    color: rgba(0, 0, 0, 0.637);
+}
