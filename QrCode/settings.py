@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'plan_settings',
     'authorization',
     'registration',
-    'contacts'
+    'contacts',
+    'colorfield'
 ]
 
 MIDDLEWARE = [

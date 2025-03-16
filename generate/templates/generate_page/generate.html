@@ -6,15 +6,83 @@
 {% endblock %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'generate_page/css/style_generate.css' %}">
+    <link rel="stylesheet" href="{% static 'generate_page/css/styles_generation.css' %}">
 {% endblock %}
 
 {% block content %}
-   <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="form-btn">Download</button>
-    </form>
-
+    <div class="info">
+        <form action="" method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+    
+            <div class="container">
+                <button class="accordion">
+                    <span><span class="icon"><i class='bx bx-world'></i></span> ENTER CONTENT</span>
+                    <span>+</span>
+                </button>
+                <div class="panel">
+                    <label for="{{ form.name.id_for_label }}">Name</label>
+                    {{ form.name }}
+    
+                    <label for="{{ form.link.id_for_label }}">Your url</label>
+                    {{ form.link }}
+                </div>
+    
+                <button class="accordion">
+                    <span><span class="icon"><i class='bx bxs-palette'></i></span> SET COLORS</span>
+                    <span>+</span>
+                </button>
+                <div class="panel">
+    
+                    <label for="{{ form.bg_color.id_for_label }}">Foreground Color</label>
+                    
+                    <div class="mb-3">
+                        <input type="radio" name="bg_color" value="#ffffff"> Basic color
+                        <input type="radio" name="bg_color" value="#f8f9fa"> Gradient
+                    </div>
+    
+                    {{ form.bg_color }}
+    
+                    <label for="{{ form.fg_color.id_for_label }}">Background Color</label>
+                    {{ form.fg_color }}
+                </div>
+                
+    
+    
+                <button class="accordion">
+                    <span><span class="icon"><i class='bx bx-image'></i></span> ADD LOGO IMAGE</span>
+                    <span>+</span>
+                </button>
+                <div class="panel">
+                    {{ form.image }}
+                </div>
+                
+                <button class="accordion">
+                    <span><span class="icon"><i class='bx bx-qr' ></i></span> CUSTOMIZE DESIGN</span>
+                    <span>+</span>
+                </button>
+                <div class="panel">
+                    {{ form.patterns }}
+                </div>
+                
+                <div class="pattern-type">
+                    <label>Choose your QR code pattern:</label><br>
+                    <img src="{% static 'qr/patterns/square.png' %}" class="style-option" data-style="square">
+                    <img src="{% static 'qr/patterns/dots.png' %}" class="style-option" data-style="dots">
+                    <img src="{% static 'qr/patterns/lines.png' %}" class="style-option" data-style="lines">
+                </div>
+            </div>
+            <button type="submit" class="form-btn">Generate</button>
+        </form>
+    
+        <div class="qr-preview">
+            <img src="" alt="qr code preview">
+        </div>
+    </div>
+    
     <script src="{% static 'generate_page/js/page_generate.js' %}" defer></script>
 {% endblock %}
+
+    <!-- {% if qr_image %}
+        <h4>Preview: </h4>
+        <img src="{{ qr_image.url }}" alt="QR Code preview">
+    {% endif %} -->

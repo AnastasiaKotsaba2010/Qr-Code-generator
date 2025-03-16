@@ -1,38 +1,43 @@
-import qrcode
+import qrcode, os
 from django.shortcuts import render, redirect
 from django.http import HttpRequest
 import qrcode.constants
 from .forms import QRCodeForm
+from .models import Qrcode
+from qrcode.image.styledpil import StyledPilImage
+from qrcode.image.styles.moduledrawers import *
+from qrcode.image.styles.colormasks import SolidFillColorMask
 
 # Create your views here.
-def render_generate(request: HttpRequest):
+
+def generate_qr(request: HttpRequest):
     form = QRCodeForm()
-    if request.method == "POST":
-        form = QRCodeForm(request.POST, request.FILES)
-        
-        if form.is_valid():
-            # name = form.cleaned_data.get('name')
-            # url = form.cleaned_data.get('url')
-            # qr_color = form.cleaned_data.get('qr_color')
-            # bg_color = form.cleaned_data.get('bg_color')
-            # border = form.cleaned_data.get('border')
-            # border_radius = form.cleaned_data.get('border_radius')
-            # logo_image = form.cleaned_data.get('logo_image')
-            
-            # qr = qrcode.QRCode(
-            #     version = 3,
-            #     error_correction = qrcode.constants.ERROR_CORRECT_H, 
-            #     box_size = 5,
-            #     border = border
-            # )
-            
-            # qr.add_data(url)
-            # qr.make(fit= True)
-            
-            form.save()
-            return redirect('/')
-    else:
-        form = QRCodeForm(request.POST, request.FILES)
-            # print(f'name: {name}, url: {url}, qr_color{qr_color}, bg_color: {bg_color}, border:{border}, border_radius: {border_radius}, logo_image: {logo_image} ')
-    
-    return render(request = request, template_name = 'generate_page/generate.html', context= {'form': form})
+    if request.method == 'POST':
+        qr_form = QRCodeForm(request.POST, request.FILES)
+
+        if qr_form.is_valid():
+            print(000000)
+            name = qr_form.cleaned_data.get('name')
+            link = qr_form.cleaned_data.get('link')
+            border = qr_form.cleaned_data.get('border')
+            patterns = qr_form.cleaned_data.get('patterns')
+            bg_color = qr_form.cleaned_data.get('bg_color')
+            fg_color = qr_form.cleaned_data.get('fg_color')
+            time = qr_form.cleaned_data.get('time')
+
+            print(f'name: {name}, link: {link}, border: {border}')
+
+            return render(
+                request,
+                'generate_page/generate.html',
+                {
+                    'form': qr_form,
+                    # 'qr_image_path': file_path
+                }
+            )
+
+    return render(
+        request,
+        'generate_page/generate.html',
+        {'form': form}
+    )

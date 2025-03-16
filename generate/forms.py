@@ -6,35 +6,66 @@ class QRCodeForm(forms.ModelForm):
     class Meta:
        model = Qrcode
        fields = '__all__'
-       widget = {
+       
+       widgets = {
+           'name': forms.TextInput(
+               attrs= {
+                'class': 'form-name',
+                'id': 'name'
+            }
+           ),
+           
+           'link': forms.URLInput(
+               attrs= {
+                'class': 'form-url',
+                'id': 'link'
+            }
+           ),
+           
            'bg_color': forms.TextInput(
-               attrs= {'type': 'color'}
+               attrs= {
+                    'type': 'color', 
+                    'class': 'bg-color',
+                    'value': '#4f4949',
+                    'id': 'bg_color'
+                }
            ),
            
            'fg_color': forms.TextInput(
-               attrs= {'type': 'color'}
+               attrs= {
+                   'type': 'color', 
+                   'class': 'fg-color',
+                   'value': '#4f4949',
+                    'id': 'fg_color'
+                }
+           ),
+           
+           'patterns': forms.Select(
+               attrs= {
+                'class': 'form-pattern',
+                    'id': 'patterns'
+            }
+           ),
+           
+           'border': forms.Select(
+               attrs= {
+                'class': 'qr-border',
+                    'id': 'border'
+            }
+           ),
+           
+           'border_width': forms.NumberInput(
+               attrs= {
+                'class': 'qr-width', 
+                'min': 1,
+                'id': 'border-width'
+            }
+           ),
+           "image": forms.ClearableFileInput(
+               attrs= {
+                'class': 'qr-img',
+                'id': 'image'
+            }
            )
        }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-#     name = forms.CharField(label = "Name:", required = True)
-#     url = forms.URLField(label = "URL:", required = True, max_length = 100)
-#     #                                                                                       <input type="color">
-#     qr_color = forms.CharField(label = "Foreground color:", widget = forms.TextInput(attrs= {'type': "color"}), initial= '#000000')
-#     bg_color = forms.CharField(label = "Background color:", widget = forms.TextInput(attrs= {'type': "color"}), initial= '#FFFFFF')
-    
-#     border = forms.IntegerField(label = 'Border width:', min_value = 1, max_value = 10)
-#     border_radius = forms.BooleanField(label = 'Border radius:', required = False)
-#     logo_image = forms.ImageField(label = 'Logo image (optional):', required = False)
 
