@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'plan_settings',
     'authorization',
     'registration',
-    'contacts',
-    'colorfield'
+    'contacts'
 ]
 
 MIDDLEWARE = [
@@ -144,6 +143,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'contacts' / 'static'
     
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
